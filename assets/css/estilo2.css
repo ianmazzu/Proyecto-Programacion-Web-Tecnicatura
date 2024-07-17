@@ -1,0 +1,75 @@
+CSS
+/* Restablecer estilos predeterminados */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Cuerpo de la página */
+body {
+  background-color: #F0F0F0; /* Color de fondo (elige tu color preferido) */
+  color: #333; /* Color de texto */
+}
+
+/* Encabezado */
+header {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Título de la página */
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+/* Contenido principal */
+main {
+  padding: 20px;
+}
+
+/* Párrafos */
+p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Enlaces */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+/* Imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+/* Formularios */
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transición de color */
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3; /* Color de fondo al pasar el cursor */
+}

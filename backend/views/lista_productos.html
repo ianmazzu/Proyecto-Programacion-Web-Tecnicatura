@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de productos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/estilo2.css"/>
+</head>
+<body>
+    <center>
+        <h1 class="title">Lista de Productos</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Categoría</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($lista_prod as $producto) { ?>
+                <tr>
+                    <td><?php echo $producto['id']; ?></td>
+                    <td><?php echo $producto['nombre_producto']; ?></td> 
+                    <td><?php echo $producto['descripcion']; ?></td>
+                    <td><?php echo $producto['precio']; ?></td>
+                    <td><?php echo $producto['categoria_id']; ?></td> 
+                </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+        <a href="categorias.php?add">Agregar Producto</a>
+        <h2>Ian</h2>
+    </center>
+</body>
+</html>
