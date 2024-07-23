@@ -1,6 +1,6 @@
 <?php
 
-/*Autor: Mazzucco Ian*/
+/*Autor: Ian*/
 
 class Categorias {
     
@@ -11,7 +11,7 @@ class Categorias {
     function __construct($id = null) {
         if ($id != null) {
             $db = new base_datos("mysql", "mydatabase", "127.0.0.1", "root", "");
-            $resp = $db->select("categoria", "id=?", array($id));
+            $resp = $db->select("categorias", "id=?", array($id));
             
             if (isset($resp[0]['id'])) {
                 $this->id = $resp[0]['id'];
@@ -37,12 +37,12 @@ class Categorias {
     
     public function eliminar() {
         $db = new base_datos("mysql", "mydatabase", "127.0.0.1", "root", "");
-        return $db->delete("categoria", "id = ?", array($this->id));
+        return $db->delete("categorias", "id = ?", array($this->id));
     }
     
     private function insertar() {
         $db = new base_datos("mysql", "mydatabase", "127.0.0.1", "root", "");
-        $resp = $db->insert("categoria", "nombre_categoria", "?", array($this->nombre));
+        $resp = $db->insert("categorias", "nombre_categoria", "?", array($this->nombre));
         
         if ($resp) {
             $this->id = $resp;
@@ -55,12 +55,12 @@ class Categorias {
     
     private function actualizar() {
         $db = new base_datos("mysql", "mydatabase", "127.0.0.1", "root", "");
-        return $db->update("categoria", "nombre_categoria=?", "id=?", array($this->nombre, $this->id));
+        return $db->update("categorias", "nombre_categoria=?", "id=?", array($this->nombre, $this->id));
     }
     
     static public function listar() {
         $db = new base_datos("mysql", "mydatabase", "127.0.0.1", "root", "");
-        return $db->select("categoria");
+        return $db->select("categorias");
     }
 }
 

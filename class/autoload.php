@@ -1,6 +1,6 @@
 <?php
 
-/*Autor: Mazzucco Ian*/
+/*Autor: Ian*/
 
 class Autocarga {
     

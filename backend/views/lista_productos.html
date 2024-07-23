@@ -4,11 +4,11 @@
     <title>Lista de productos</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/estilo2.css"/>
+    <link rel="stylesheet" href="../assets/css/estilos2.css"/>
 </head>
 <body>
     <center>
-        <h1 class="title">Lista de Productos</h1>
+        <div>Lista de Productos</div>
         <table>
             <thead>
                 <tr>
@@ -20,7 +20,7 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($lista_prod as $producto) { ?>
+                <?php foreach ($lista_pro as $producto) { ?>
                 <tr>
                     <td><?php echo $producto['id']; ?></td>
                     <td><?php echo $producto['nombre_producto']; ?></td> 
@@ -31,8 +31,7 @@
                 <?php } ?>
             </tbody>
         </table>
-        <a href="categorias.php?add">Agregar Producto</a>
-        <h2>Ian</h2>
+        <a href="productos.php?add">Agregar Producto</a>
     </center>
 </body>
 </html>

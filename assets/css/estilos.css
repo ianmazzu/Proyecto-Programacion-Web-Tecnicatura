@@ -1,25 +1,98 @@
-body{
+body {
     text-align: center;
-    margin-top: 5%;
-}
-img{
-    width: 180px;
-    height: 150px;
-}
-label{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 15px;
+    margin-top: 5%;      
 }
 
-.bt1{
-    background-color: green;
-    color: whitesmoke;
-    border-radius: 10px;
-    margin-top: 1%;
+img {
+    width: 190px;
+    height: 210px;
 }
-.bt2{
+
+label {
+    font-size: 25px;
+    font-family: sans-serif;
+}
+
+.btn {
     background-color: red;
-    color: whitesmoke;
-    border-radius: 10px;
+    color: white;
+    border-radius: 15px;
     margin-top: 1%;
 }
+
+.a{
+    color: red;
+    text-decoration: none;
+}
+.btn {
+    background-color: red;    
+    border-radius: 15px;    
+    margin-top: 1%;    
+}
+
+/* Nuevos estilos para el encabezado y la tabla */
+
+/* Estilo del encabezado */
+header {    
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .img_tienda img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilo de la tabla */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    vertical-align: center;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table th {
+    background-color: #333;
+    color: white;
+    vertical-align: center;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+    vertical-align: center;
+}
+
+table tbody tr:hover {
+    background-color: #ddd;
+    vertical-align: center;
+}
+
+table td {
+    vertical-align: center;
+}
+
+/* Estilo para productos */
+table td {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Asegurarse de que las celdas no sean demasiado anchas */
+table td {
+    word-wrap: break-word;
+}
+
+product-table{
+    text-align: center;
+    align-items: center;
+     padding: 20px;
+}
+

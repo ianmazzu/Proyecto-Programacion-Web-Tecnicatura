@@ -1,11 +1,12 @@
 <?php
 /* Autor: Mazzucco Ian */
-class productos {
+class Productos {
     public $id;
     public $nombre;
     public $descripcion;
     public $precio;
     public $categoria;
+    public $imagen;
     private $exist = false;
 
     function __construct($id) {
@@ -16,6 +17,7 @@ class productos {
             $this->nombre = $resp[0]['nombre_producto'];
             $this->descripcion = $resp[0]['descripcion'];
             $this->precio = $resp[0]['precio'];
+            $this->imagen = $resp[0]['imagen'];
             $this->categoria = $resp[0]['categoria_id'];
             $this->exist = true;
         }
@@ -42,8 +44,8 @@ class productos {
     }
 
     private function insertar($db) {
-        $resp = $db->insert("productos", "nombre_producto, descripcion, precio, categoria_id", "?,?,?,?",
-                            array($this->nombre, $this->descripcion, $this->precio, $this->categoria));
+         $resp = $db->insert("productos", "nombre_producto, descripcion, precio, imagen, categoria_id", "?,?,?,?",
+                            array($this->nombre, $this->descripcion, $this->precio, $this->imagen, $this->categoria));
         if ($resp) {
             $this->id = $resp;
             $this->exist = true;
@@ -54,8 +56,8 @@ class productos {
     }
 
     private function actualizar($db) {
-        return $db->update("productos", "nombre_producto=?, descripcion=?, precio=?, categoria_id=?", "id=?",
-                           array($this->nombre, $this->descripcion, $this->precio, $this->categoria, $this->id));
+        return $db->update("productos", "nombre_producto=?, descripcion=?, precio=?, imagen=?, categoria_id=?", "id=?",
+                           array($this->nombre, $this->descripcion, $this->precio, $this->precio, $this->categoria, $this->id));
     }
 
     static public function listar() {

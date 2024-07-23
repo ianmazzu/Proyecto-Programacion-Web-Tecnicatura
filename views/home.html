@@ -1,15 +1,50 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<head>
+    <title>My Store</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/estilos.css"/>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="./assets/img/img1" alt="Imagen tienda"> 
+        </div>
+    </header>
+    <main>
+        <h1>Lista de Productos</h1>
+        <table class="product-table">
+            <thead>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Producto</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Categoría</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($lp as $indice => $producto) { ?>
+                    <tr>
+                        <td>
+                            <img src="./assets/img/<?php echo $producto['imagen']; ?>" alt="<?php echo $producto['nombre_producto']; ?>">
+                        </td>
+                        <td><?php echo $producto['nombre_producto']; ?></td>
+                        <td><?php echo $producto['descripcion']; ?></td>
+                        <td><?php echo $producto['precio']; ?></td>
+                        <td>
+                            <?php 
+                                $cat = new Categorias($producto['categoria_id']);
+                                echo $cat->nombre;
+                            ?>
+                        </td>
+                    </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+        <button class="btn"><a href="backend/productos.php?add" class="a" >Agregar Producto</a></button>
+        <button class="btn"><a href="backend/categorias.php?add" class="a" >Agregar Categoría</a></button>
+    </main>
+</body>
 </html>

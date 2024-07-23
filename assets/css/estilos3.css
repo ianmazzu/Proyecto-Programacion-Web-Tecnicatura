@@ -1,0 +1,113 @@
+/*
+    ** All elements border-box
+*/
+/*
+    ** Root elemnt font size
+    ** No default margins and paddings
+*/
+*,
+*:before,
+*::after {
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #434343;
+  
+}
+
+/*
+    **root elements display block
+*/
+body {
+  line-height: 1.317101995;
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+  background-color: #ffffff;
+  text-align: center;
+  background-color: #434343;
+  border-radius: 10px;
+}
+
+.centered-elements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.btn {
+  position: relative;
+  display: block;
+  height: 77px;
+  width: 300px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: #fff;
+  font-size: 18px;
+  overflow: hidden;
+  transition: all 500ms ease;
+  border: 2px solid #20e2d7;
+  margin-bottom: 40px;
+  z-index: 0;
+  font-weight: 700;
+  cursor: pointer;
+}
+.bt::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  background-color: #20e2d7;
+  transition: all 1000ms ease;
+  z-index: -1;
+  border-radius: 10px;
+   margin-top: 1%;
+}
+.bt1::before {
+  width: 0;
+  height: 100%;
+}
+.bt1:hover {
+  background-color:mistyrose;
+  color: #ff6961;
+  border-radius: 10px;
+}
+.bt1:hover::before {
+  width: 100%;
+}
+.bt2:hover {
+  background-color: #20e2d7;
+  box-shadow: 0 0 10px #20e2d7, 0 0 20px #20e2d7, 0 0 20px #20e2d7;
+  color: #434343;
+  border-radius: 10px;
+
+}
+
+
+@keyframes shadow-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(32, 226, 215, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 8px 16px rgba(32, 226, 215, 0);
+  }
+}
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 18 jul 2024, 12:59:30 a. m.
+    Author     : ian_m
+*/
+

@@ -13,6 +13,6 @@ if(isset($_POST['accion']) && $_POST['accion'] === 'guardar'){
     die();
 }
 
-$lista_prod = Productos::listar();
+$lista_pro = Productos::listar();
 include 'views/lista_productos.html';
 ?>
